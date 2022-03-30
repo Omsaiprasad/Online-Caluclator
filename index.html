@@ -1,0 +1,115 @@
+<HTML>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Caluclator</title>
+
+    <style>
+        .calc td input {
+            width: 50px;
+            height: 50px;
+        }
+
+        .calc th input {
+            width: 208px;
+            height: 40px;
+        }
+
+        #equals {
+            height: 102px;
+        }
+
+        #display[type="text"] {
+            font-size:25px;
+
+        }
+
+        #display {
+            text-align: right; 
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <form name="form1" onsubmit="form1.answer.value=eval(form1.answer.value); return false;">
+        <table class="calc">
+            <tr>
+                <th colspan="4">
+                    <input type="text" name="answer" id="display" disabled>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="C" onclick="form1.answer.value=' '">
+                </td>
+                <td>
+                    <input type="button" value="%" onclick="form1.answer.value+='%' ">
+                </td>
+                <td>
+                    <input type="button" value="/" onclick="form1.answer.value+='/' ">
+                </td>
+                <td>
+                    <input type="button" value="*" onclick="form1.answer.value+='*' ">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="8" onclick="form1.answer.value+='8' ">
+                </td>
+                <td>
+                    <input type="button" value="7" onclick="form1.answer.value+='7' ">
+                </td>
+                <td>
+                    <input type="button" value="9" onclick="form1.answer.value+='9' ">
+                </td>
+                <td>
+                    <input type="button" value="-" onclick="form1.answer.value+='-' ">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="4" onclick="form1.answer.value+='4' ">
+                </td>
+                <td>
+                    <input type="button" value="6" onclick="form1.answer.value+='6' ">
+                </td>
+                <td>
+                    <input type="button" value="5" onclick="form1.answer.value+='5' ">
+                </td>
+                <td>
+                    <input type="button" value="+" onclick="form1.answer.value+='+' ">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="1" onclick="form1.answer.value+='1' ">
+                </td>
+                <td>
+                    <input type="button" value="2" onclick="form1.answer.value+='2' ">
+                </td>
+                <td>
+                    <input type="button" value="3" onclick="form1.answer.value+='3' ">
+                </td>
+                <td rowspan="2">
+                    <input id="equals" type="button" value="=" onclick="form1.answer.value=eval(form1.answer.value);">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" id="zerozero" value="00" onclick="form1.answer.value+='00' ">
+                </td>
+                <td>
+                    <input type="button" id="zero" value="0" onclick="form1.answer.value+='0' ">
+                </td>
+                <td>
+                    <input type="button" value="." onclick="form1.answer.value+='.'">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+
+</HTML>
