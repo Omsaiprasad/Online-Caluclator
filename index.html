@@ -5,6 +5,9 @@
     <title>Caluclator</title>
 
     <style>
+        body{
+            background-color:lightblue;
+        }
         .calc td input {
             width: 50px;
             height: 50px;
@@ -23,7 +26,12 @@
             place-items: center;
             margin: 0;
         }
-
+        h1{
+            color:black;
+            text-align:center;
+            text-decoration-line: underline;
+            font-size: 25px;
+        }
         #equals {
             height: 102px;
         }
@@ -39,10 +47,11 @@
 </head>
 
 <body>
-
+    
     <form name="form1" onsubmit="form1.answer.value=eval(form1.answer.value); return false;">
         <table class="calc">
             <tr>
+                <h1>CALCULATOR</h1>
                 <th colspan="4">
                     <input type="text" name="answer" id="display" disabled>
                 </th>
