@@ -5,19 +5,26 @@
     <title>Caluclator</title>
 
     <style>
-        body{
-            background-color:lightblue;
+        body {
+            background-color: lightblue;
         }
+
         .calc td input {
             width: 50px;
             height: 50px;
-            color: blue;
+            font-size: 16px;
+            color: black;
+            border-radius: 25px;
+            border-width:thin;
         }
 
         .calc th input {
-            width: 208px;
+            width: 212px;
             height: 40px;
-            color: blue;
+            font-size: 20px;
+            color: black;
+            border-radius: 25px;
+            border-width:thin;
         }
 
         body {
@@ -25,19 +32,29 @@
             height: 100vh;
             place-items: center;
             margin: 0;
+            border-radius: 25px;
         }
-        h1{
-            color:black;
-            text-align:center;
+
+        h1 {
+            color: black;
+            text-align: center;
             text-decoration-line: underline;
             font-size: 25px;
         }
+
+        #material-icons {
+            height: 50px;
+            width: 50px;
+        }
+
         #equals {
-            height: 102px;
+            height:103px;
+            
         }
 
         #display[type="text"] {
             font-size: 25px;
+            color: blue;
         }
 
         #display {
@@ -47,11 +64,12 @@
 </head>
 
 <body>
-    
+
     <form name="form1" onsubmit="form1.answer.value=eval(form1.answer.value); return false;">
         <table class="calc">
             <tr>
                 <h1>CALCULATOR</h1>
+
                 <th colspan="4">
                     <input type="text" name="answer" id="display" disabled>
                 </th>
@@ -64,7 +82,8 @@
                     <input type="button" value="%" onclick="form1.answer.value+='%' ">
                 </td>
                 <td>
-                    <input type="button" value="/" onclick="form1.answer.value+='/' ">
+                    <input type="button" value="÷" onclick="form1.answer.value+='÷' ">
+
                 </td>
                 <td>
                     <input type="button" value="*" onclick="form1.answer.value+='*' ">
